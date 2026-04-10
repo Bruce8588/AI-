@@ -78,31 +78,31 @@ ai-dialogue/
 ## 项目备忘
 
 ### 星夜（life-manager）
-- **前端端口：** 3001（通过Nginx代理）
-- **访问路径：** http://8.129.109.139/starry-h7k2s/life/
+- **前端端口：** 3001
+- **访问路径：** https://8.129.109.139/starry-h7k2s/life/
 - **GitHub：** https://github.com/Bruce8588/life-manager
 - **本地路径：** ~/Desktop/AI项目/life-manager
 - **服务器路径：** /root/life-manager
 - **包含：** 星夜前端 + 交易系统 + 饮食追踪
 
 ### 交易系统（trading-system）
-- **前端端口：** 3000（通过Nginx代理）
-- **访问路径：** http://8.129.109.139/trading-p9m4v/
+- **前端端口：** 3000
+- **访问路径：** https://8.129.109.139/trading-p9m4v/
 - **GitHub：** https://github.com/Bruce8588/trading-system
 - **服务器路径：** /root/life-manager/trading-system
 
 ### 饮食追踪（diet-tracker）
-- **Flask端口：** 5002（通过Nginx代理）
-- **访问路径：** http://8.129.109.139/diet-n8w3x/
+- **Flask端口：** 5002
+- **访问路径：** https://8.129.109.139/diet-n8w3x/
 - **服务器路径：** /root/life-manager/diet-tracker（已移入life-manager）
 
 ### Nginx反向代理
 - **作用：** 隐藏真实端口，防恶意扫描
 - **配置：** /etc/nginx/conf.d/star.conf
 - **路径：**
-  - /starry-h7k2s/ → 星夜
-  - /trading-p9m4v/ → 交易系统
-  - /diet-n8w3x/ → 饮食追踪
+  - /starry-h7k2s/ → 星夜（port 3001）
+  - /trading-p9m4v/ → 交易系统（port 3000）
+  - /diet-n8w3x/ → 饮食追踪（port 5002）
 
 ### 智算系统
 - **本地路径：** ~/.openclaw/workspace/工作台/智算/
